@@ -464,12 +464,15 @@ font-weight: 500;
 .footer-form-input{
     border-radius: 4px;
     border: 1px solid #FFFFFF;
-    box-shadow:rgba(0, 0, 0, 0.15);
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.15);
     height: 40px;
     width: 264px;
+    background-color: transparent;
+    line-height: 2;
+    letter-spacing: 0.04em;
 
 
-    background-color: #2E2F42;
+
     max-width: 100%;
     font-size: 12px;
     font-style: normal;
@@ -480,10 +483,12 @@ font-weight: 500;
 
 .footer-btn {
     display: inline-flex;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     border: none;
     border-radius: 4px;
+    justify-content: center;
+    align-items: center;
     background-color: #4D5AE5;
     color: #FFF;
     font-weight: 500;
@@ -495,6 +500,9 @@ font-weight: 500;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 8px 24px;
+}
+.footer-subscribe-icon{
+    margin-left: 16px;
 }
 
 .footer-btn:hover, .footer-btn:focus {
@@ -526,15 +534,15 @@ font-weight: 500;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) scale(0.2);
-    padding: 72px, 24px, 24px, 24px;
+    padding:24px;
+    padding-top:72px;
   
     width: 408px;
     min-height: 584px;
-    padding: 24px;
     background: #fcfcfc;
     border-radius: 4px;
     opacity: 0;
-    transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow:0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   }
   .backdrop.is-open .modal {
@@ -552,6 +560,7 @@ font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
+
     border: none;
     background-color: #E7E9FC;
     border:1px solid rgba(0, 0, 0, 0.1);
@@ -570,14 +579,20 @@ font-weight: 500;
     stroke:#ffffff;
     fill:#ffffff;
   }
+  .modal-btn:focus .modal-btn-icon{
+    stroke:#ffffff;
+    fill:#ffffff;
+  }
   .modal-btn:hover, .modal-btn:focus{
     background-color:#404bbf;
+    border: none;
+
   }
   
 
   .modal-caption {
   margin-top:24px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -595,6 +610,8 @@ font-weight: 500;
     letter-spacing:0.04em;
     margin-bottom:4px;
     color: rgba(64, 64, 64, 0.3);
+    color:#8e8f99;
+    display: block;
 
   }
   .modal-form-box {
@@ -611,6 +628,8 @@ font-weight: 500;
     transition: border-color 300ms ease;
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    padding-left: 38px;
   }
   input[type='text']:focus, input[type='text']:hover{
     border:1px #4D5AE5 solid;
@@ -639,7 +658,6 @@ font-weight: 500;
     margin-top: 8px;
     font-size: 12px;
     line-height: 1.17;
-    /* border: 1px solid rgba(17, 17, 17, 0.05); */
     border-radius: 4px;
     outline: transparent;
     resize: none;
@@ -648,6 +666,7 @@ font-weight: 500;
     letter-spacing:0.04em;
     background-color: transparent;
     margin-bottom: 24px;
+    border:1px solid rgba(46, 47, 66, 0.4);
 
 
 
@@ -659,12 +678,13 @@ font-weight: 500;
     color: rgba(64, 64, 64, 0.3);
   }
   .modal-form-agreement {
-    margin-top: 16px;
-    margin-bottom: 24px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+  }
+  .modal-form-wrapper{
+    margin-bottom:24px;
   }
   .agreement {
     display: block;
@@ -673,6 +693,8 @@ font-weight: 500;
     color: rgba(64, 64, 64, 0.6);
   }
   .agreement-checkbox {
+    
+    fill:#F4F4FD;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -682,12 +704,14 @@ font-weight: 500;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    fill:transparent;
   }
+  
   input[type='checkbox']:checked + .agreement .agreement-checkbox {
-    border: none;
-    background: #404bbf;
     border-color: #404bbf;
+    background-color:#404bbf;
+    border:none;
+    fill:transparent;
+
   }
 
   .agreement-checkbox-icon {
