@@ -610,7 +610,7 @@ font-weight: 500;
     position: absolute;
     left: 24px;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     stroke: #2E2F42;
     fill:#2E2F42;
     transition:cubic-bezier(0.4, 0, 0.2, 1);
